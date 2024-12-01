@@ -1,0 +1,186 @@
+.ServiceContainer{
+    width: 100%;
+    position: relative;
+    padding: 70px 0px;
+    background-color:#2a2b2ce5 ;
+    color: #fff;
+    .serviceText{
+        font-size: 17px;
+        font-family: var(--textFamily);
+        color: #fff;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .CardContainer{
+        width: 100%;
+        background: url('../../../Assets/pattern-bg.jpg');
+  
+    }
+    
+    .CardContainer{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        display: block;
+        transition: all 0.5s ease-in-out 0s;
+    }
+    .service-card{
+        padding: 1rem;
+        .flip-card{
+            position: relative;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease-in-out 0s;
+            z-index: 0;
+            .front-face, .back-face{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.5rem;
+                padding: 3rem 2rem;
+                backface-visibility: hidden;
+                transform-origin: center;
+                transform-style: preserve-3d;
+                perspective: inherit;
+                transition: all 1s ease 0s;
+                box-shadow: 0px 0px 10px 0px rgba(8, 188, 233, 0.1);
+            }
+            .front-face{
+                position: relative;
+                z-index: 2;
+                border: 1px solid #2678d1;
+                // transform: rotateX(0deg);
+            }
+            .back-face{
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                transform: rotateX(180deg);
+                .overlay-color{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    display: block;
+                    transition: all 0.5s ease-in-out 0s;
+                    background: #ebe7e7;
+                    opacity: 0.75;
+                    box-shadow: 0px 0px 10px 0px rgba(8, 188, 233, 0.329);
+                }
+            }
+        }
+        .flip-card.flip-y .back-face{
+            transform: rotateY(180deg);
+        }
+        .flip-card.flip-y:hover{
+            .front-face{
+                transform: rotateY(180deg);
+            }
+            .back-face{
+                transform: rotateY(0deg);
+            }
+        }
+        .flip-card.flip-x:hover{
+            .front-face{
+                transform: rotateX(180deg);
+            }
+            .back-face{
+                transform: rotateX(0deg);
+            }
+        }
+        
+        .flip-card .imagelogo{
+            padding: 20px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .service-card{
+        .icon-wrapper, .title-wrapper, .desc-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+          
+        }
+        .icon{
+            font-size: 40px;
+            color: var(--primaryColor);
+        }
+        .title{
+            font-family: var(--headingFamily);
+        }
+        .desc{
+            text-align: center;
+            height: 55px;
+            font-family: var(--textFamily);
+        }
+    }
+}
+
+.servicebg{
+    background: #0000000D;
+    padding: 20px;
+    margin: 50px 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    .phone{
+        display: flex;
+        gap: 15px;
+        .icon{
+            font-size: 30px;
+            color: var(--primaryColor)
+        }
+        .text{
+            font-family: var(--headingFamily);
+            font-size: 18px;
+            span{
+                color: var(--textColor);
+            }
+        }
+    }
+    .right{
+        display: flex;
+        gap: 30px;
+        .days{
+            display: flex;
+            gap: 15px;
+            .icon{
+                font-size: 30px;
+                color: var(--primaryColor)
+            }
+            .text{
+                font-family: var(--headingFamily);
+                font-size: 16px;
+                color: var(--textColor)
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .servicebg{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .right{
+            flex-direction: column;
+        }
+    }
+}

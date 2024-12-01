@@ -1,0 +1,217 @@
+.AboutContainer{
+    width: 100%;
+    position: relative;
+    padding: 70px 0px;
+    .aboutText{
+        font-size: 17px;
+        font-family: var(--textFamily);
+        color: var(--textColor);
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    @media screen and (max-width: 450px) {
+        .aboutText{
+            width: 90%
+        }
+    }
+    .aboutImage{
+        img{
+            width: 100%;
+        }
+        margin-bottom: 20px;
+    }
+    .aboutToggle{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 7px;
+        font-family: var(--headingFamily);
+        font-size: x-large;
+        font-weight: 600;
+        .tabs {
+            text-align: center;
+            box-sizing: content-box;
+            position: relative;
+            transition: 0.6s all ease;
+            font-family: var(--headingFamily);
+            font-weight: normal;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+            cursor: pointer;
+            caret-color: transparent;
+        }
+        .active-tabs  {
+            color: var(--primaryColor);
+        }
+    }
+    .tabContent {
+    width: 100%;
+    display: none;
+    }
+    
+    .active-tabContent {
+    display: block;
+    margin-top: 20px;
+    }
+    .pageText{
+        .title{
+            font-size: 17px;
+            font-family: var(--headingFamily);
+            color: var(--mainBlack);
+            padding-bottom: 25px;
+        }
+        .text{
+            font-size: 16px;
+            font-family: var(--textFamily);
+            color: var(--textColor);
+            padding-bottom: 25px;
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            span{
+                position: relative;
+                top:1px;
+                .icon{
+                    color: var(--primaryColor)
+                }
+            }
+        }
+        
+    }
+    .withUs{
+        .content{
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            span{
+                color: var(--primaryColor);
+                font-family: var(--headingFamily);
+                font-size: x-large;
+                position: relative;
+                top:-5px
+            }
+            .title{
+                font-family: var(--headingFamily);
+                font-size: large;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .banner{
+        background: var(--primaryColor);
+        width: 100%;
+        position: relative;
+        margin-top: 40px;
+        .guaranteedImage{
+            img{
+                position: relative;
+                width: 100%;
+                top:-30px;
+            }
+        }
+        .guaranteedText{
+            padding: 30px 0px;
+            .title{
+                text-align: center;
+                font-family: var(--headingFamily);
+                font-size: x-large;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+    .visionMission{
+        padding: 70px 0px 20px;
+        width: 100%;
+        .contentWrapper{
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            .image{
+                .icon{
+                    font-size: 60px;
+                    color: var(--primaryColor)
+                }
+            }
+            .content{
+                .title{
+                    font-family: var(--headingFamily);
+                    font-size: x-large;
+                    font-weight: 600;
+                    color: var(--mainBlack);
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+    .bannerSecond{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .title{
+            font-family: var(--headingFamily);
+            font-size: x-large;
+            font-weight: 600;
+            color: #fff;
+            span{
+                display: block;
+            }
+        }
+        .buttonLink{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background: #fff;
+            color: var(--primaryColor);
+            width: fit-content;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .bannerSecond{
+            flex-direction: column;
+        }
+    }
+    .ValuesContainer{
+        width: 100%;
+        padding: 70px 0px 40px;
+        .wrapper{
+            display: flex;
+            gap: 15px;
+            padding-bottom: 20px;
+            .image{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: var(--primaryColor);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.6s all ease;
+                .icon{
+                    color: #fff;
+                    font-size: 20px;
+                }
+            }
+            .image:hover{
+                background: #0000000D;
+            }
+            .text{
+                width: 90%;
+                .title{
+                    font-family: var(--headingFamily);
+                    color: var(--mainBlack);
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

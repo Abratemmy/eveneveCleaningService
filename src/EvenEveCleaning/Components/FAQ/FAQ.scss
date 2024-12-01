@@ -1,0 +1,43 @@
+.faqContainer{
+    position: relative;
+    .titleContainer{
+        padding: 5px 0px;
+    }
+    .wrapper{
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+        margin-bottom: 10px;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-family: var(--headingFamily);
+        font-size: 18px;
+        color: var(--mainBlack);
+    }
+    .titleColor{
+        color: var(--primaryColor)
+    }
+    .answer{
+        font-family: var(--textFamily);
+        color: var(--textColor);
+        font-size: 16px;
+        line-height: 27px;
+        animation-name: slideUp;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+    }
+    @keyframes slideIn {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0%);
+          opacity: 1;
+        
+        }
+      }
+}

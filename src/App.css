@@ -1,20 +1,18 @@
 :root{
-  --textColor:#504e4e;
+  --textColor:#777373;
   --purpleColor: #BA68C8;
-  --mainBlack: #1f2027;
+  --mainBlack: #1A1A1A;
   --logoText:'Updock', cursive;
   --logo2Text: 'Neonderthaw', cursive;
   --headingFamily: 'Raleway', sans-serif;
   --textFamily: 'Lato', sans-serif;
-
-
   --secondaryColor: #e0e4f0;
-  --primaryColor: #2F3D7E;
+  --primaryColor: #0de3eb;
   --text2Color: #646262;
   --accentColor: #ED7D3A;
 
   --backgroundColor: #0b081b;
-  --backgroundColor2: #0c0c20;
+  --backgroundColor2: #e5e5e959;
   --pinkColor: #ff2600;
   --fadePink: #ff260080;
 }
@@ -53,4 +51,45 @@
   border-right: 1 solid transparent;
   border-top: 1 solid black;
   top: 55%;
+}
+.buttonLink{
+  border: none;
+  border-radius: 5px;
+  background: var(--primaryColor);
+  color: #fff;
+  font-family: var(--headingFamily);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+.pageTitle{
+  font-family: var(--headingFamily);
+  color: #000000;
+  font-size: xx-large;
+  position: relative;
+  padding-bottom: 20px;
+}
+.pageTitle .line{
+  position: absolute;
+  top: 38px;
+  background: #2678d1;
+  height: 8px;
+  width: 200px;
+}
+@media screen and (max-width: 450px) {
+  .pageTitle{
+      font-size: x-large;
+  }
+  .pageTitle .line{
+    top: 29px;
+    height: 5px;
+    width: 100px;
+  }
+}
+
+.pageText{
+  color: var(--textColor);
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--textFamily);
 }

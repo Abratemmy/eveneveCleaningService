@@ -1,0 +1,90 @@
+.footerContainer{
+    background: #0000000D;
+    padding: 80px 0px;
+    width: 100%;
+    position: relative;
+    .ribbon{
+        position: absolute;
+        top:-14px;
+    }
+    .footerDetail{
+        margin-top: 80px;
+        .logo{
+            padding-bottom: 20px;
+            img{
+                width: 60%;
+            }
+        }
+        .aboutText{
+            color: var(--textColor);
+            font-family: var(--textFamily);
+            padding-bottom: 20px;
+        }
+        .buttonLink{
+            display: flex;
+            width: fit-content;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .footerContent{
+        .title{
+            font-family: var(--headingFamily);
+            font-size: 18px;
+            padding-bottom: 15px;
+            font-weight: 700;
+            color: var(--mainBlack);
+            
+        }
+        .listContent{
+            .details{
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                padding-bottom: 7px;
+                span{
+                    .icon{
+                        color: var(--primaryColor)
+                    }
+                }
+                .footerNav{
+                    text-decoration: none;
+                    color: var(--textColor);
+                    font-size: 17px;
+                    font-family: var(--textFamily);
+                    transition: 0.4s all ease;
+                }
+                .footerNav:hover{
+                    color: var(--primaryColor)
+                }
+            }
+        }
+        .contactDetail{
+            .contact{
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                padding-bottom: 15px;
+                .icon{
+                    color: var(--primaryColor);
+                    font-size: 20px;
+                }
+                .text{
+                    color: var(--textColor);
+                    font-size: 17px;
+                    position: relative;
+                    top:-5px;
+                    font-weight: 600;
+                }
+                a{
+                    text-decoration: none;
+                    color: var(--textColor);
+                    transition: 0.4s all ease;
+                }
+                a:hover{
+                    color: var(--primaryColor)
+                }
+            }
+        }
+    }
+}
